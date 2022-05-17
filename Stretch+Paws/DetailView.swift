@@ -9,8 +9,11 @@ import SwiftUI
 
 struct DetailView: View {
     var body: some View {
-        Text("Purfect")
-            .font(.title)
+        ZStack {
+            Color("Secondary").ignoresSafeArea()
+            Text("Purfect")
+                .font(.title)
+        }
     }
 }
 

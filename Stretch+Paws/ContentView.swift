@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // old UI kit for extending background color 
+    init(){
+        UITableView.appearance().backgroundColor = UIColor(named: "Secondary")
+    }
+    
+    
+    
+    let poses = Poses()
     var body: some View {
         NavigationView {
-            List {
+            List(poses.poseData) { pose in
                 NavigationLink(destination: DetailView()) {
-                Text("Downward-facing Dog")
+                    Image(pose.icon)
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                    Text(pose.name)
+                        .fontWeight(.medium)
+                        .font(.title3)
+                        .padding(.leading, 20)
+                }
+                .padding(5)
+                .listRowBackground(Color("Secondary"))
             }
-                
-                Text("Lotus Pose")
-                Text("Tree Pose")
-            }
+        
             .listStyle(.grouped)
             .navigationBarTitle("Stretch+Paws")
         }
