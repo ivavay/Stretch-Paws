@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     let pose: Pose
+    @State private var timerOpen = false
     var body: some View {
         ZStack {
             Color("Secondary").ignoresSafeArea()
@@ -43,6 +44,9 @@ struct DetailView: View {
                     }
                 }.padding(.horizontal, 20)
             }
+            TimerPanelView(timerOpen: $timerOpen)
+        }.onTapGesture {
+            timerOpen = false
         }
     }
 }
@@ -58,5 +62,42 @@ struct DetailView_Previews: PreviewProvider {
             steps: ["From a kneeling position, place your hands shoulder-distance apart and spread your fingers.", "Tuck your toes and lift your hips up towards the ceiling so you create an inverted V shape.", "Balance the weight between hands and feet and think about tilting your tailbone up towards the ceiling.","Send your gaze towards your feet and breath!"],
             topTip: "Bend your knees in order to create more length through the spine." )
         )
+    }
+}
+
+struct TimerPanelView: View {
+    @Binding var timerOpen: Bool
+    var body: some View {
+        VStack {
+            Spacer()
+            VStack {
+                // use tertiary opoerator to set logic for what to show when timer is open or closed
+                timerOpen ? AnyView(TimerOpenView()): AnyView(TimerClosedView())
+               
+            }
+            .frame(maxWidth: .infinity, maxHeight: timerOpen ? 200 : 80)
+            .background(Color("Highlight"))
+            .cornerRadius(15)
+                
+        }
+        
+        .ignoresSafeArea()
+        .onTapGesture {
+            timerOpen.toggle()
+        }
+        
+    }
+}
+
+struct TimerOpenView: View {
+    var body: some View {
+        Text("Hold the pose")
+            .foregroundColor(Color("Secondary"))
+    }
+}
+struct TimerClosedView: View {
+    var body: some View {
+        Text("Try it out")
+            .foregroundColor(Color("Secondary"))
     }
 }
