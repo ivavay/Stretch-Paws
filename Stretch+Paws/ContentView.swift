@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    // old UI kit for extending background color 
+    // old UI kit for extending background color
     init(){
         UITableView.appearance().backgroundColor = UIColor(named: "Secondary")
     }
@@ -20,7 +20,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(poses.poseData) { pose in
-                NavigationLink(destination: DetailView()) {
+                NavigationLink(destination: DetailView(pose:pose)) {
                     Image(pose.icon)
                         .resizable()
                         .frame(width: 60, height: 60)
