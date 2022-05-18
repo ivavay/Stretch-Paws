@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F046B58E2835845E00C17D2E /* chime.wav in Resources */ = {isa = PBXBuildFile; fileRef = F046B58D2835845D00C17D2E /* chime.wav */; };
 		F05E9DB128347C9C00D3E695 /* YogaTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E9DB028347C9C00D3E695 /* YogaTimer.swift */; };
 		F08EE83B2832EDED0087B09C /* Stretch_PawsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EE83A2832EDED0087B09C /* Stretch_PawsApp.swift */; };
 		F08EE83D2832EDED0087B09C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EE83C2832EDED0087B09C /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F046B58D2835845D00C17D2E /* chime.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime.wav; sourceTree = "<group>"; };
 		F05E9DB028347C9C00D3E695 /* YogaTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTimer.swift; sourceTree = "<group>"; };
 		F08EE8372832EDED0087B09C /* Stretch+Paws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stretch+Paws.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EE83A2832EDED0087B09C /* Stretch_PawsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stretch_PawsApp.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				F08EE848283355DD0087B09C /* DetailView.swift */,
 				F08EE84A283358460087B09C /* Pose.swift */,
 				F05E9DB028347C9C00D3E695 /* YogaTimer.swift */,
+				F046B58D2835845D00C17D2E /* chime.wav */,
 				F08EE83E2832EDF10087B09C /* Assets.xcassets */,
 				F08EE8402832EDF10087B09C /* Preview Content */,
 			);
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F046B58E2835845E00C17D2E /* chime.wav in Resources */,
 				F08EE8422832EDF10087B09C /* Preview Assets.xcassets in Resources */,
 				F08EE83F2832EDF10087B09C /* Assets.xcassets in Resources */,
 			);
