@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F05E9DB128347C9C00D3E695 /* YogaTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E9DB028347C9C00D3E695 /* YogaTimer.swift */; };
 		F08EE83B2832EDED0087B09C /* Stretch_PawsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EE83A2832EDED0087B09C /* Stretch_PawsApp.swift */; };
 		F08EE83D2832EDED0087B09C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EE83C2832EDED0087B09C /* ContentView.swift */; };
 		F08EE83F2832EDF10087B09C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08EE83E2832EDF10087B09C /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F05E9DB028347C9C00D3E695 /* YogaTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTimer.swift; sourceTree = "<group>"; };
 		F08EE8372832EDED0087B09C /* Stretch+Paws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stretch+Paws.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EE83A2832EDED0087B09C /* Stretch_PawsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stretch_PawsApp.swift; sourceTree = "<group>"; };
 		F08EE83C2832EDED0087B09C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F08EE83C2832EDED0087B09C /* ContentView.swift */,
 				F08EE848283355DD0087B09C /* DetailView.swift */,
 				F08EE84A283358460087B09C /* Pose.swift */,
+				F05E9DB028347C9C00D3E695 /* YogaTimer.swift */,
 				F08EE83E2832EDF10087B09C /* Assets.xcassets */,
 				F08EE8402832EDF10087B09C /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			files = (
 				F08EE84B283358460087B09C /* Pose.swift in Sources */,
 				F08EE83D2832EDED0087B09C /* ContentView.swift in Sources */,
+				F05E9DB128347C9C00D3E695 /* YogaTimer.swift in Sources */,
 				F08EE849283355DD0087B09C /* DetailView.swift in Sources */,
 				F08EE83B2832EDED0087B09C /* Stretch_PawsApp.swift in Sources */,
 			);
