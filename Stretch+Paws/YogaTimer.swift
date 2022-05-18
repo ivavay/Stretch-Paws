@@ -10,12 +10,12 @@ import Foundation
 // what kind of data typs should this be? a class or a struct?
 // where does the timer need to be shared?
 
-class YogaTimer {
+class YogaTimer: ObservableObject {
     // timer states
-    var timerActive = false
-    var timerPause = false
-    var timerEnded = false
-    var timerDuration = 30
+    @Published var timerActive = false
+    @Published var timerPause = false
+    @Published var timerEnded = false
+    @Published var timerDuration = 30
     
     var yogaTimer = Timer()
     

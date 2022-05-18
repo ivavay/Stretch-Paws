@@ -66,13 +66,18 @@ struct DetailView_Previews: PreviewProvider {
 }
 
 struct TimerPanelView: View {
+    
+    @StateObject var yogaTimer = YogaTimer()
+    
+    
+    
     @Binding var timerOpen: Bool
     var body: some View {
         VStack {
             Spacer()
             VStack {
                 // use tertiary opoerator to set logic for what to show when timer is open or closed
-                timerOpen ? AnyView(TimerOpenView()): AnyView(TimerClosedView())
+                timerOpen ? AnyView(TimerOpenView(yogaTimer: yogaTimer)): AnyView(TimerClosedView())
                
             }
             .frame(maxWidth: .infinity, maxHeight: timerOpen ? 400 : 80)
@@ -90,6 +95,10 @@ struct TimerPanelView: View {
 }
 
 struct TimerOpenView: View {
+    
+    @ObservedObject var yogaTimer: YogaTimer
+    
+    
     var body: some View {
         VStack {
         Text("Hold the pose")
@@ -100,12 +109,12 @@ struct TimerOpenView: View {
             .foregroundColor(Color("Secondary"))
             .multilineTextAlignment(.center)
         Spacer()
-        Text("00:30")
+            Text(yogaTimer.timerDuration < 10 ? "00:\(yogaTimer.timerDuration)" : "00:\(yogaTimer.timerDuration)")
             .foregroundColor(Color("Secondary"))
             .font(.system(size:96))
         Spacer()
         Button {
-            // do something
+            yogaTimer.startTimer()
         } label: {
             Text("Start the timer")
         }
